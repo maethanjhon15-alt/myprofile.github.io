@@ -9,7 +9,21 @@
     body{margin:0;background:var(--bg);color:#111;line-height:1.5}
     .wrap{max-width:900px;margin:48px auto;padding:28px;background:#fff;border-radius:12px;box-shadow:0 8px 30px rgba(10,10,10,0.06)}
     header{display:flex;gap:20px;align-items:center}
-    .avatar{width:110px;height:110px;border-radius:12px;flex:0 0 110px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:28px}
+
+    /* UPDATED AVATAR */
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 12px;
+      overflow: hidden;
+      flex: 0 0 110px;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     h1{margin:0;font-size:26px}
     p.lead{margin:6px 0 16px;color:#444}
     .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
@@ -23,12 +37,15 @@
 <body>
   <main class="wrap">
     <header>
-      <img src="profile.jpg" alt="Girl in a jacket" width="500" height="600">
+      <div class="avatar">
+        <img src="me.jpg" alt="Profile Photo">
+      </div>
+
       <div>
         <h1>Maethan Jhon Hermac</h1>
         <p class="lead">Frontend developer • Designer • Open-source tinkerer. Based in Manila.</p>
         <div class="meta">
-          <a href="mailto:you@example.com">maethanjhon15@gmail.com</a>
+          <a href="mailto:maethanjhon15@gmail.com">maethanjhon15@gmail.com</a>
           <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
           <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
         </div>
@@ -52,7 +69,10 @@
     </section>
 
     <footer>
-      © <span id="year"></span> Maethan Jhon Hermac — <a href="https://your-website.example" target="_blank" rel="noopener">https://web.facebook.com/maethanjhon.hermac/?_rdc=1&_rdr#</a>
+      © <span id="year"></span> Maethan Jhon Hermac — 
+      <a href="https://web.facebook.com/maethanjhon.hermac/?_rdc=1&_rdr" target="_blank" rel="noopener">
+        Facebook Profile
+      </a>
     </footer>
   </main>
 
@@ -61,5 +81,3 @@
   </script>
 </body>
 </html>
-
-
